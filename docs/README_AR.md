@@ -61,3 +61,11 @@ python3 tools/verify_encrypted_catalog.py --in build/game_catalog.enc.gz --key b
 - 12 مليون سجل قد ينتج ملفًا كبيرًا؛ يُفضّل Chunking أو تقسيمه حسب المنطقة/النمط.
 - احتفظ بمفتاح التشفير في Secure Enclave/Keystore وليس داخل النص البرمجي.
 - على iOS/Android استخدم reconnect window (مثلاً 20 ثانية) أثناء host migration.
+
+## تطبيق تجريبي جاهز للتشغيل
+
+تم إضافة تطبيق تجريبي في `app/p2p_game_app.py` لمحاكاة جلسة P2P كاملة مع ترحيل Host وسياسات الدور.
+
+```bash
+python3 app/p2p_game_app.py --players 4 --turns 8
+```
